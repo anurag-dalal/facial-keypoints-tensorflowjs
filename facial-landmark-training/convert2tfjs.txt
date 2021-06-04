@@ -1,4 +1,8 @@
 IMPORTANT COMAANDS FOR TF TO TFJS:
+<<<<<<< HEAD
 
 
 tensorflowjs_converter --input_format keras detectv1.h5 tfjs/
+=======
+tensorflowjs_converter --input_format keras detectv1.h5 tfjs/
+>>>>>>> 6884fb8252ffbfa5239a4ca6bbea7adca90cd11e
