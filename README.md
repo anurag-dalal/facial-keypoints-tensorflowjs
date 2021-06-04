@@ -51,4 +51,12 @@ Go inside the local-server directory from terminal, and run the following:
 ```bash
 node .\server.js
 ```
-This will start the server, now from the browser navigate to http://localhost:81/predict-with-tfjs.html, you will find this page:\
+This will start the server, now from the browser navigate to http://localhost:81/predict-with-tfjs.html, you will find this page: \
+![Page1](/images/page1.png "page1")
+Once you uploaded the image and click on predict, the output will be shown like: \
+![Page2](/images/page2.png "page2")
+
+## Links from where I took help:
+[Link1](https://www.youtube.com/watch?v=EoYfa6mYOG4)
+[Link2](https://www.kaggle.com/ritvik1909/facial-keypoint-detection-cnn-aug-tl)
+[Link3](https://js.tensorflow.org/api/latest/)
