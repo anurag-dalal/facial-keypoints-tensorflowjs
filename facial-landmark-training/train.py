@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -312,7 +311,6 @@ test_preds = model.predict(test_images)
 fig = plt.figure(figsize=(20,16))
 for i in range(20):
     axis = fig.add_subplot(4, 5, i+1, xticks=[], yticks=[])
-=======
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -626,5 +624,4 @@ test_preds = model.predict(test_images)
 fig = plt.figure(figsize=(20,16))
 for i in range(20):
     axis = fig.add_subplot(4, 5, i+1, xticks=[], yticks=[])
->>>>>>> 6884fb8252ffbfa5239a4ca6bbea7adca90cd11e
     plot_sample(test_images[i], test_preds[i], axis, "")
