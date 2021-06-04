@@ -16,7 +16,7 @@ def plot_sample(image, keypoint, axis, title):
     axis.scatter(keypoint[0::2], keypoint[1::2], marker='x', s=20)
     plt.title(title)
     
-img = cv2.imread('G:/Python codes/MLs/ModakaTech2/testimages/test2.JPG')
+img = cv2.imread('G:/Python codes/MLs/ModakaTech_node/facial-keypoints-tensorflowjs/testimages/test2.JPG')
 HEIGHT = img.shape[0]
 WIDTH = img.shape[1]
 img = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
