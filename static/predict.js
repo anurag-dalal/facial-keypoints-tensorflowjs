@@ -48,4 +48,28 @@ $("#predict-button").click(async function () {
     document.getElementById("mouth_right_corner").innerHTML = 'mouth_right_corner: ('+Math.round(k[24])+','+Math.round(k[25])+')';
     document.getElementById("mouth_center_top_lip").innerHTML = 'mouth_center_top_lip: ('+Math.round(k[26])+','+Math.round(k[27])+')';
     document.getElementById("mouth_center_bottom_lip").innerHTML = 'mouth_center_bottom_lip: ('+Math.round(k[28])+','+Math.round(k[29])+')';
+
+    // Create an image element
+    var img = new Image();
+    var canvas = document.getElementById('c');
+    var ctx = canvas.getContext('2d');
+    var canover=document.getElementById('cover');
+
+    var ctxover = canvas.getContext('2d');
+    img.src = image.src;
+
+    // When the image is loaded, draw it
+    img.onload = function () {
+        ctx.drawImage(img, 0, 0);
+        ctx.fillStyle = 'green';
+        var i;
+        for (i = 0; i < 15; i++){
+            ctxover.fillRect(Math.round(k[i*2]*img.width/96)-4,Math.round(k[i*2+1]*img.height/96)-4,8,8);
+        }
+    }
+    
+    canvas.width=img.width;
+    canvas.height=img.height;
+    canover.width=img.width;
+    canover.height=img.height;
 })

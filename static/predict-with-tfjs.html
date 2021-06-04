@@ -2,7 +2,10 @@
 <html>
 	<head>
 		<title>Detect Keypoint</title>
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+		<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" 
+			rel="stylesheet" 
+			integrity="sha256-MfvZlkHCEqatNoGiOXveE8FIwMzZg4W85qfrfIFBfYc= sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" 
+			crossorigin="anonymous">
 		<style>
 			.center {
 		  		margin: auto;
@@ -15,18 +18,31 @@
 	<body>
 		<br>
 		<main>
-			<div class = "container mt-5">
+			<div class = "container">
 				<div class = "row">
-					<div class = "col-6">
+					<div class = "col-sm-6">
 						<div class = "progress progress-bar progress-bar-striped progress-bar-animated mb-2">Loading Model</div>
 					</div>
 				</div>
 				<div class = "row">
-					<div class = "col-6">
+					<div class = "col-sm-6">
 						<input id = "image-selector" class = "form-control border-0" type = "file">
 					</div>
-					<div class = "col-6">
+					<div class = "col-sm-6">
 						<button id = "predict-button" class = "btn btn-dark float-right">Predict</button>
+					</div>
+				</div>
+				<hr>
+				<hr>
+				<div class = "row">
+					<div class = "col-sm-6">
+						<h2 class = "ml-3">Original Image</h2>
+						<img id = "selected-image" class = "ml-3" src=""/>
+					</div>
+					<div class = "col-sm-6">
+						<h2 class = "ml-3">Detected keypoint</h2>
+						<canvas id="c"  style="z-index: 1;"></canvas>
+						<canvas id="cover" style="z-index: 2; display: None;"></canvas>
 					</div>
 				</div>
 				<hr>
@@ -50,13 +66,6 @@
 							<p id="mouth_center_top_lip"></p>
 							<p id="mouth_center_bottom_lip"></p>
 						</div>
-					</div>
-				</div>
-				<hr>
-				<div class = "row">
-					<div class = "col-12">
-						<h2 class = "ml-3">Image</h2>
-						<img id = "selected-image" class = "ml-3" src="" width="96" height="96"/>
 					</div>
 				</div>
 			</div>
