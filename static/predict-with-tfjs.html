@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Detect Keypoint</title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+		<style>
+			.center {
+		  		margin: auto;
+		  		width: 60%;
+		  		border: 3px solid #73AD21;
+		  		padding: 10px;
+			}		
+		</style>
+	</head>
+	<body>
+		<br>
+		<main>
+			<div class = "container mt-5">
+				<div class = "row">
+					<div class = "col-6">
+						<div class = "progress progress-bar progress-bar-striped progress-bar-animated mb-2">Loading Model</div>
+					</div>
+				</div>
+				<div class = "row">
+					<div class = "col-6">
+						<input id = "image-selector" class = "form-control border-0" type = "file">
+					</div>
+					<div class = "col-6">
+						<button id = "predict-button" class = "btn btn-dark float-right">Predict</button>
+					</div>
+				</div>
+				<hr>
+				<div class = "row">
+					<div class = "col">
+						<h2 class = "ml-3">Predictions</h2>
+						<div class="center" style="display: none;" id = "showkeyp">
+							<p id="left_eye_center"></p>
+							<p id="right_eye_center"></p>
+							<p id="left_eye_inner_corner"></p>
+							<p id="left_eye_outer_corner"></p>
+							<p id="right_eye_inner_corner"></p>
+							<p id="right_eye_outer_corner"></p>
+							<p id="left_eyebrow_inner_end"></p>
+							<p id="left_eyebrow_outer_end"></p>
+							<p id="right_eyebrow_inner_end"></p>
+							<p id="right_eyebrow_outer_end"></p>
+							<p id="nose_tip"></p>
+							<p id="mouth_left_corner"></p>
+							<p id="mouth_right_corner"></p>
+							<p id="mouth_center_top_lip"></p>
+							<p id="mouth_center_bottom_lip"></p>
+						</div>
+					</div>
+				</div>
+				<hr>
+				<div class = "row">
+					<div class = "col-12">
+						<h2 class = "ml-3">Image</h2>
+						<img id = "selected-image" class = "ml-3" src="" width="96" height="96"/>
+					</div>
+				</div>
+			</div>
+		</main>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@2.0.0/dist/tf.min.js"></script>
+		<script src = "predict.js"></script>
+    </body>
+</html>
