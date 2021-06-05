@@ -1,6 +1,7 @@
 # Facial Keypoints Detection using Tensorflowjs
 
 This repository contain a Facial landmark detection, with inference in browser employing tensorflowjs.
+The app is deployed on heroku and can be found in this [link](https://facelandmark.herokuapp.com/predict-with-tfjs.html)
 The steps are explained in details
 
 ## Prerequisites
